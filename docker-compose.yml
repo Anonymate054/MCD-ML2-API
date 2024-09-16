@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    command: bash -c 'uvicorn app.main:app --host 0.0.0.0 --reload'
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
