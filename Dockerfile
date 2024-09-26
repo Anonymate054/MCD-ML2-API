@@ -6,10 +6,13 @@ WORKDIR /app
 # set env variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-
+ENV PORT 8080
 # install dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy project
 COPY . .
+
+# Run app
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "${PORT}"]
