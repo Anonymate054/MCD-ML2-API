@@ -189,6 +189,6 @@ poetry.toml
 pyrightconfig.json
 
 # Models
-*.pkl
+# *.pkl
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,python
